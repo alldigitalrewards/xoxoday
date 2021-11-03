@@ -1,0 +1,12 @@
+{
+  "data": {
+    "getBalance": {
+      "status": 1,
+      "data": {
+        "points": 9944,
+        "value": 705798,
+        "currency": "USD"
+      }
+    }
+  }
+}

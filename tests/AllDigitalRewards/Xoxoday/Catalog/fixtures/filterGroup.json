@@ -1,0 +1,437 @@
+{
+  "filterGroupName": "My Country",
+  "filterGroupDescription": "Meow",
+  "filterGroupCode": "Country",
+  "filters": [
+    {
+      "filterValue": "Afghanistan",
+      "isoCode": "AF",
+      "filterValueCode": "afghanistan"
+    },
+    {
+      "filterValue": "Andorra",
+      "isoCode": "AD",
+      "filterValueCode": "andorra"
+    },
+    {
+      "filterValue": "Argentina",
+      "isoCode": "AR",
+      "filterValueCode": "argentina"
+    },
+    {
+      "filterValue": "Armenia",
+      "isoCode": "AR",
+      "filterValueCode": "armenia"
+    },
+    {
+      "filterValue": "Australia",
+      "isoCode": "AU",
+      "filterValueCode": "australia"
+    },
+    {
+      "filterValue": "Austria",
+      "isoCode": "AT",
+      "filterValueCode": "austria"
+    },
+    {
+      "filterValue": "Bahrain",
+      "isoCode": "BH",
+      "filterValueCode": "bahrain"
+    },
+    {
+      "filterValue": "Bangladesh",
+      "isoCode": "BD",
+      "filterValueCode": "bangladesh"
+    },
+    {
+      "filterValue": "Belgium",
+      "isoCode": "BE",
+      "filterValueCode": "belgium"
+    },
+    {
+      "filterValue": "Brazil",
+      "isoCode": "BR",
+      "filterValueCode": "brazil"
+    },
+    {
+      "filterValue": "Bulgaria",
+      "isoCode": "BG",
+      "filterValueCode": "bulgaria"
+    },
+    {
+      "filterValue": "Canada",
+      "isoCode": "CA",
+      "filterValueCode": "canada"
+    },
+    {
+      "filterValue": "Chile",
+      "isoCode": "CL",
+      "filterValueCode": "chile"
+    },
+    {
+      "filterValue": "China",
+      "isoCode": "CN",
+      "filterValueCode": "china"
+    },
+    {
+      "filterValue": "Colombia",
+      "isoCode": "CO",
+      "filterValueCode": "colombia"
+    },
+    {
+      "filterValue": "Croatia",
+      "isoCode": "",
+      "filterValueCode": "croatia"
+    },
+    {
+      "filterValue": "Cyprus",
+      "isoCode": "CY",
+      "filterValueCode": "cyprus"
+    },
+    {
+      "filterValue": "Czech Republic",
+      "isoCode": "CZ",
+      "filterValueCode": "czech_republic"
+    },
+    {
+      "filterValue": "Denmark",
+      "isoCode": "DK",
+      "filterValueCode": "denmark"
+    },
+    {
+      "filterValue": "Dominican Republic",
+      "isoCode": "DO",
+      "filterValueCode": "dominican_republic"
+    },
+    {
+      "filterValue": "Egypt",
+      "isoCode": "EG",
+      "filterValueCode": "egypt"
+    },
+    {
+      "filterValue": "Estonia",
+      "isoCode": "EE",
+      "filterValueCode": "estonia"
+    },
+    {
+      "filterValue": "Europe",
+      "isoCode": "",
+      "filterValueCode": "europe"
+    },
+    {
+      "filterValue": "Finland",
+      "isoCode": "FI",
+      "filterValueCode": "finland"
+    },
+    {
+      "filterValue": "France",
+      "isoCode": "FR",
+      "filterValueCode": "france"
+    },
+    {
+      "filterValue": "Germany",
+      "isoCode": "GD",
+      "filterValueCode": "germany"
+    },
+    {
+      "filterValue": "Hong Kong",
+      "isoCode": "HK",
+      "filterValueCode": "hong_kong"
+    },
+    {
+      "filterValue": "Hungary",
+      "isoCode": "HU",
+      "filterValueCode": "hungary"
+    },
+    {
+      "filterValue": "Iceland",
+      "isoCode": "IS",
+      "filterValueCode": "iceland"
+    },
+    {
+      "filterValue": "India",
+      "isoCode": "IN",
+      "filterValueCode": "india"
+    },
+    {
+      "filterValue": "Indonesia",
+      "isoCode": "ID",
+      "filterValueCode": "indonesia"
+    },
+    {
+      "filterValue": "Ireland",
+      "isoCode": "IE",
+      "filterValueCode": "ireland"
+    },
+    {
+      "filterValue": "Israel",
+      "isoCode": "IL",
+      "filterValueCode": "israel"
+    },
+    {
+      "filterValue": "Italy",
+      "isoCode": "IT",
+      "filterValueCode": "italy"
+    },
+    {
+      "filterValue": "Jamaica",
+      "isoCode": "JM",
+      "filterValueCode": "jamaica"
+    },
+    {
+      "filterValue": "Japan",
+      "isoCode": "JP",
+      "filterValueCode": "japan"
+    },
+    {
+      "filterValue": "Kazakhstan",
+      "isoCode": "KZ",
+      "filterValueCode": "kazakhstan"
+    },
+    {
+      "filterValue": "Kenya",
+      "isoCode": "KE",
+      "filterValueCode": "kenya"
+    },
+    {
+      "filterValue": "Kuwait",
+      "isoCode": "KW",
+      "filterValueCode": "kuwait"
+    },
+    {
+      "filterValue": "Latvia",
+      "isoCode": "",
+      "filterValueCode": "latvia"
+    },
+    {
+      "filterValue": "Lebanon",
+      "isoCode": "LB",
+      "filterValueCode": "lebanon"
+    },
+    {
+      "filterValue": "Lithuania",
+      "isoCode": "",
+      "filterValueCode": "lithuania"
+    },
+    {
+      "filterValue": "Luxembourg",
+      "isoCode": "LU",
+      "filterValueCode": "luxembourg"
+    },
+    {
+      "filterValue": "Malaysia",
+      "isoCode": "MY",
+      "filterValueCode": "malaysia"
+    },
+    {
+      "filterValue": "Malta",
+      "isoCode": "MT",
+      "filterValueCode": "malta"
+    },
+    {
+      "filterValue": "Mauritius",
+      "isoCode": "MU",
+      "filterValueCode": "mauritius"
+    },
+    {
+      "filterValue": "Mexico",
+      "isoCode": "MX",
+      "filterValueCode": "mexico"
+    },
+    {
+      "filterValue": "Monaco",
+      "isoCode": "MC",
+      "filterValueCode": "monaco"
+    },
+    {
+      "filterValue": "Mongolia",
+      "isoCode": "MN",
+      "filterValueCode": "mongolia"
+    },
+    {
+      "filterValue": "Morocco",
+      "isoCode": "",
+      "filterValueCode": "morocco"
+    },
+    {
+      "filterValue": "Myanmar",
+      "isoCode": "MM",
+      "filterValueCode": "myanmar"
+    },
+    {
+      "filterValue": "Netherlands",
+      "isoCode": "NL",
+      "filterValueCode": "netherlands"
+    },
+    {
+      "filterValue": "New Zealand",
+      "isoCode": "NZ",
+      "filterValueCode": "new_zealand"
+    },
+    {
+      "filterValue": "Nigeria",
+      "isoCode": "NG",
+      "filterValueCode": "nigeria"
+    },
+    {
+      "filterValue": "Norway",
+      "isoCode": "NO",
+      "filterValueCode": "norway"
+    },
+    {
+      "filterValue": "Oman",
+      "isoCode": "OM",
+      "filterValueCode": "oman"
+    },
+    {
+      "filterValue": "Pakistan",
+      "isoCode": "",
+      "filterValueCode": "pakistan"
+    },
+    {
+      "filterValue": "Peru",
+      "isoCode": "PE",
+      "filterValueCode": "peru"
+    },
+    {
+      "filterValue": "Philippines",
+      "isoCode": "PH",
+      "filterValueCode": "philippines"
+    },
+    {
+      "filterValue": "Poland",
+      "isoCode": "PL",
+      "filterValueCode": "poland"
+    },
+    {
+      "filterValue": "Portugal",
+      "isoCode": "PT",
+      "filterValueCode": "portugal"
+    },
+    {
+      "filterValue": "Qatar",
+      "isoCode": "QA",
+      "filterValueCode": "qatar"
+    },
+    {
+      "filterValue": "Romania",
+      "isoCode": "RO",
+      "filterValueCode": "romania"
+    },
+    {
+      "filterValue": "Russia",
+      "isoCode": "RU",
+      "filterValueCode": "russia"
+    },
+    {
+      "filterValue": "San Marino",
+      "isoCode": "SM",
+      "filterValueCode": "san_marino"
+    },
+    {
+      "filterValue": "Saudi Arabia",
+      "isoCode": "SA",
+      "filterValueCode": "saudi_arabia"
+    },
+    {
+      "filterValue": "Serbia",
+      "isoCode": "RS",
+      "filterValueCode": "serbia"
+    },
+    {
+      "filterValue": "Singapore",
+      "isoCode": "SG",
+      "filterValueCode": "singapore"
+    },
+    {
+      "filterValue": "Slovakia",
+      "isoCode": "SK",
+      "filterValueCode": "slovakia"
+    },
+    {
+      "filterValue": "Slovenia",
+      "isoCode": "SI",
+      "filterValueCode": "slovenia"
+    },
+    {
+      "filterValue": "South Africa",
+      "isoCode": "ZA",
+      "filterValueCode": "south_africa"
+    },
+    {
+      "filterValue": "South Korea",
+      "isoCode": "KR",
+      "filterValueCode": "south_korea"
+    },
+    {
+      "filterValue": "Spain",
+      "isoCode": "ES",
+      "filterValueCode": "spain"
+    },
+    {
+      "filterValue": "Sri Lanka",
+      "isoCode": "LK",
+      "filterValueCode": "sri_lanka"
+    },
+    {
+      "filterValue": "Sweden",
+      "isoCode": "SE",
+      "filterValueCode": "sweden"
+    },
+    {
+      "filterValue": "Switzerland",
+      "isoCode": "CH",
+      "filterValueCode": "switzerland"
+    },
+    {
+      "filterValue": "Taiwan",
+      "isoCode": "TW",
+      "filterValueCode": "taiwan"
+    },
+    {
+      "filterValue": "Thailand",
+      "isoCode": "TH",
+      "filterValueCode": "thailand"
+    },
+    {
+      "filterValue": "Turkey",
+      "isoCode": "TR",
+      "filterValueCode": "turkey"
+    },
+    {
+      "filterValue": "UAE",
+      "isoCode": "AE",
+      "filterValueCode": "uae"
+    },
+    {
+      "filterValue": "UK",
+      "isoCode": "GB",
+      "filterValueCode": "uk"
+    },
+    {
+      "filterValue": "Ukraine",
+      "isoCode": "Uk",
+      "filterValueCode": "ukraine"
+    },
+    {
+      "filterValue": "Uruguay",
+      "isoCode": "UY",
+      "filterValueCode": "uruguay"
+    },
+    {
+      "filterValue": "USA",
+      "isoCode": "US",
+      "filterValueCode": "usa"
+    },
+    {
+      "filterValue": "Vatican City",
+      "isoCode": "VA",
+      "filterValueCode": "vatican_city"
+    },
+    {
+      "filterValue": "Vietnam",
+      "isoCode": "VN",
+      "filterValueCode": "vietnam"
+    }
+  ]
+}
