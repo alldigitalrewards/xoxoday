@@ -19,9 +19,11 @@ class GetVouchersRequest extends Request implements HasResponse
 
     private string $accessToken = '';
 
-    public function __construct(string $access_token)
+    public function __construct(string $access_token, int $limit = 10, int $page = 1)
     {
         $this->accessToken = $access_token;
+        $this->setLimit($limit);
+        $this->setPage($page);
         $this->setupRequest();
     }
 
