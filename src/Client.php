@@ -2,6 +2,7 @@
 
 namespace AllDigitalRewards\Xoxoday;
 
+use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 
 class Client
@@ -17,6 +18,9 @@ class Client
         $this->httpClient = $httpClient;
     }
 
+    /**
+     * @throws ClientExceptionInterface
+     */
     public function request(HasResponse $request): AbstractEntity
     {
         $responseObjClass = $request->getResponseObject();

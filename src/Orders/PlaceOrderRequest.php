@@ -53,11 +53,11 @@ class PlaceOrderRequest extends Request implements HasResponse
                 'Content-Type' => 'application/json',
                 'Authorization' => 'Bearer ' . $this->accessToken,
             ],
-            $this->getRequestBody()
+            $this->makeJsonBody()
         );
     }
 
-    private function getRequestBody()
+    private function makeJsonBody(): string
     {
         return json_encode(
             [
@@ -72,7 +72,8 @@ class PlaceOrderRequest extends Request implements HasResponse
                         'poNumber' => $this->poNumber
                     ]
                 ]
-            ]
+            ],
+            true
         );
     }
 }

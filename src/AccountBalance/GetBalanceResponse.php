@@ -6,10 +6,11 @@
 
 namespace AllDigitalRewards\Xoxoday\AccountBalance;
 
-use AllDigitalRewards\Xoxoday\AbstractEntity;
-use Psr\Http\Message\ResponseInterface;
+use AllDigitalRewards\Xoxoday\AbstractResponse;
+use Exception;
+use stdClass;
 
-class GetBalanceResponse extends AbstractEntity
+class GetBalanceResponse extends AbstractResponse
 {
     protected int $points = 0;
 
@@ -17,18 +18,14 @@ class GetBalanceResponse extends AbstractEntity
 
     protected string $currency = "USD";
 
-    public function __construct(ResponseInterface $response)
+    /**
+     * @throws Exception
+     */
+    public function extractData(stdClass $data): AbstractResponse
     {
-        return $this->extractData($response);
-    }
-
-    private function extractData(ResponseInterface $response)
-    {
-        $data = json_decode($response->getBody());
-
         if (empty($data->data->getBalance->data)) {
             // ╭∩╮(Ο_Ο)╭∩╮
-            throw new \Exception('Response data hates you.');
+            throw new Exception('Balance not found');
         }
 
         return $this->hydrate($data->data->getBalance->data);

@@ -6,47 +6,42 @@
 
 namespace AllDigitalRewards\Xoxoday\Orders;
 
-use AllDigitalRewards\Xoxoday\AbstractEntity;
-use AllDigitalRewards\Xoxoday\Catalog\Product;
-use Psr\Http\Message\ResponseInterface;
+use AllDigitalRewards\Xoxoday\AbstractResponse;
+use Exception;
 
-class PlaceOrderResponse extends AbstractEntity
+class PlaceOrderResponse extends AbstractResponse
 {
-    protected array $products;
+    protected $order = null;
 
-    public function __construct(ResponseInterface $response)
+    /**
+     * @return Order|null
+     */
+    public function getOrder(): ?Order
     {
-        return $this->extractData($response);
+        return $this->order;
     }
 
-    private function extractData(ResponseInterface $response)
+    /**
+     * @param Order $order
+     */
+    public function setOrder(Order $order): void
     {
-        $data = json_decode($response->getBody());
-        var_dump($data);
+        $this->order = $order;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function extractData(\stdClass $data): AbstractResponse
+    {
         if (empty($data->data->placeOrder->data)) {
             // ╭∩╮(Ο_Ο)╭∩╮
-            throw new \Exception('Response data hates you.');
+            throw new Exception('Place Order failure');
         }
 
+        $order = new Order($data->data->placeOrder->data);
+        $this->setOrder($order);
 
         return $this;
-    }
-
-    /**
-     * @param array $productData
-     */
-    private function setProducts(array $productData)
-    {
-        foreach ($productData as $productDatum) {
-            $this->products[] = new Product($productDatum);
-        }
-    }
-
-    /**
-     * @return Product[]
-     */
-    public function getProducts(): array
-    {
-        return $this->products;
     }
 }

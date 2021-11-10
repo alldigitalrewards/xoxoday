@@ -15,6 +15,57 @@ class GetFiltersRequest extends Request implements HasResponse
     use HasEnvironments;
 
     private string $accessToken = '';
+    private string $filterGroupCode = '';
+    private string $includeFilters = '';
+    private string $excludeFilters = '';
+
+    /**
+     * @return string
+     */
+    public function getFilterGroupCode(): string
+    {
+        return $this->filterGroupCode;
+    }
+
+    /**
+     * @param string $filterGroupCode
+     */
+    public function setFilterGroupCode(string $filterGroupCode): void
+    {
+        $this->filterGroupCode = $filterGroupCode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getIncludeFilters(): string
+    {
+        return $this->includeFilters;
+    }
+
+    /**
+     * @param string $includeFilters
+     */
+    public function setIncludeFilters(string $includeFilters): void
+    {
+        $this->includeFilters = $includeFilters;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExcludeFilters(): string
+    {
+        return $this->excludeFilters;
+    }
+
+    /**
+     * @param string $excludeFilters
+     */
+    public function setExcludeFilters(string $excludeFilters): void
+    {
+        $this->excludeFilters = $excludeFilters;
+    }
 
     /**
      * GetFiltersRequest constructor.
@@ -43,17 +94,23 @@ class GetFiltersRequest extends Request implements HasResponse
                 'Content-Type' => 'application/json',
                 'Authorization' => 'Bearer ' . $this->accessToken,
             ],
-            '{
-	"query": "plumProAPI.mutation.getFilters",
-	"tag": "plumProAPI",
-	"variables": {
-		"data":{
-			"filterGroupCode": "",
-        	       "includeFilters": "",
-        	       "excludeFilters": ""
-		}
-	}
-}'
+            $this->makeJsonBody()
         );
+    }
+
+    private function makeJsonBody(): string
+    {
+        $data = [
+            'query' => 'plumProAPI.mutation.getFilters',
+            'tag' => 'plumProAPI',
+            'variables' => [
+                'data' => [
+                    'filterGroupCode' => $this->getFilterGroupCode(),
+                    'includeFilters' => $this->getIncludeFilters(),
+                    'excludeFilters' => $this->getExcludeFilters(),
+                ]
+            ],
+        ];
+        return json_encode($data, true);
     }
 }
