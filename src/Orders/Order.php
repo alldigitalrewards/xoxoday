@@ -2,193 +2,207 @@
 
 namespace AllDigitalRewards\Xoxoday\Orders;
 
-class Order extends \AllDigitalRewards\Xoxoday\AbstractEntity
+use AllDigitalRewards\Xoxoday\AbstractEntity;
+
+class Order extends AbstractEntity
 {
-    protected $orderId;
-    protected $vouchers;
-    protected $amountCharged;
-    protected $currencyCode;
-    protected $tag;
-    protected $currencyValue;
-    protected $discountPercent;
-    protected $orderDiscount;
-    protected $orderTotal;
-    protected $orderStatus;
-    protected $deliveryStatus;
+    protected int $orderId;
+    protected array $vouchers;
+    protected string|int $amountCharged;
+    protected string $currencyCode;
+    protected string $tag;
+    protected string|float $currencyValue;
+    protected string|float $discountPercent;
+    protected string|float $orderDiscount;
+    protected string|float $orderTotal;
+    protected string $orderStatus;
+    protected string $deliveryStatus;
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getOrderId()
+    public function getOrderId(): int
     {
         return $this->orderId;
     }
 
     /**
-     * @param mixed $orderId
+     * @param int $orderId
      */
-    public function setOrderId($orderId): void
+    public function setOrderId(int $orderId): void
     {
         $this->orderId = $orderId;
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getVouchers()
+    public function getVouchers(): array
     {
-        return $this->vouchers;
+        $container = [];
+        foreach ($this->vouchers as $voucher) {
+            $data = new Voucher((array)$voucher);
+            $container[] =  $data->toArray();
+        }
+        return $container;
     }
 
     /**
-     * @param mixed $vouchers
+     * @param array $vouchers
      */
-    public function setVouchers($vouchers): void
+    public function setVouchers(array $vouchers): void
     {
         $this->vouchers = $vouchers;
     }
 
     /**
-     * @return mixed
+     * @return int|string
      */
-    public function getAmountCharged()
+    public function getAmountCharged(): int|string
     {
         return $this->amountCharged;
     }
 
     /**
-     * @param mixed $amountCharged
+     * @param int|string $amountCharged
      */
-    public function setAmountCharged($amountCharged): void
+    public function setAmountCharged(int|string $amountCharged): void
     {
         $this->amountCharged = $amountCharged;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getCurrencyCode()
+    public function getCurrencyCode(): string
     {
         return $this->currencyCode;
     }
 
     /**
-     * @param mixed $currencyCode
+     * @param string $currencyCode
      */
-    public function setCurrencyCode($currencyCode): void
+    public function setCurrencyCode(string $currencyCode): void
     {
         $this->currencyCode = $currencyCode;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getTag()
+    public function getTag(): string
     {
         return $this->tag;
     }
 
     /**
-     * @param mixed $tag
+     * @param string $tag
      */
-    public function setTag($tag): void
+    public function setTag(string $tag): void
     {
         $this->tag = $tag;
     }
 
     /**
-     * @return mixed
+     * @return float|string
      */
-    public function getCurrencyValue()
+    public function getCurrencyValue(): float|string
     {
         return $this->currencyValue;
     }
 
     /**
-     * @param mixed $currencyValue
+     * @param float|string $currencyValue
      */
-    public function setCurrencyValue($currencyValue): void
+    public function setCurrencyValue(float|string $currencyValue): void
     {
         $this->currencyValue = $currencyValue;
     }
 
     /**
-     * @return mixed
+     * @return float|string
      */
-    public function getDiscountPercent()
+    public function getDiscountPercent(): float|string
     {
         return $this->discountPercent;
     }
 
     /**
-     * @param mixed $discountPercent
+     * @param float|string $discountPercent
      */
-    public function setDiscountPercent($discountPercent): void
+    public function setDiscountPercent(float|string $discountPercent): void
     {
         $this->discountPercent = $discountPercent;
     }
 
     /**
-     * @return mixed
+     * @return float|string
      */
-    public function getOrderDiscount()
+    public function getOrderDiscount(): float|string
     {
         return $this->orderDiscount;
     }
 
     /**
-     * @param mixed $orderDiscount
+     * @param float|string $orderDiscount
      */
-    public function setOrderDiscount($orderDiscount): void
+    public function setOrderDiscount(float|string $orderDiscount): void
     {
         $this->orderDiscount = $orderDiscount;
     }
 
     /**
-     * @return mixed
+     * @return float|string
      */
-    public function getOrderTotal()
+    public function getOrderTotal(): float|string
     {
         return $this->orderTotal;
     }
 
     /**
-     * @param mixed $orderTotal
+     * @param float|string $orderTotal
      */
-    public function setOrderTotal($orderTotal): void
+    public function setOrderTotal(float|string $orderTotal): void
     {
         $this->orderTotal = $orderTotal;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getOrderStatus()
+    public function getOrderStatus(): string
     {
         return $this->orderStatus;
     }
 
     /**
-     * @param mixed $orderStatus
+     * @param string $orderStatus
      */
-    public function setOrderStatus($orderStatus): void
+    public function setOrderStatus(string $orderStatus): void
     {
         $this->orderStatus = $orderStatus;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getDeliveryStatus()
+    public function getDeliveryStatus(): string
     {
         return $this->deliveryStatus;
     }
 
     /**
-     * @param mixed $deliveryStatus
+     * @param string $deliveryStatus
      */
-    public function setDeliveryStatus($deliveryStatus): void
+    public function setDeliveryStatus(string $deliveryStatus): void
     {
         $this->deliveryStatus = $deliveryStatus;
+    }
+
+    public function toArray()
+    {
+        $data = parent::toArray();
+        $data['vouchers'] = $this->getVouchers();
+        return $data;
     }
 }

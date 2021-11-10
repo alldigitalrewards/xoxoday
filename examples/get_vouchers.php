@@ -1,10 +1,10 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
 use AllDigitalRewards\Xoxoday\Catalog\GetVouchersRequest;
 use AllDigitalRewards\Xoxoday\Client;
 use Psr\Http\Client\ClientExceptionInterface;
-
-require __DIR__ . '/../vendor/autoload.php';
 
 $getVouchersRequest = new GetVouchersRequest('some-access-token');
 
