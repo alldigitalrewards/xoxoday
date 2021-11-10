@@ -36,15 +36,19 @@ class GetBalanceRequest extends Request implements HasResponse
                 'Content-Type' => 'application/json',
                 'Authorization' => 'Bearer ' . $this->accessToken,
             ],
-            '{
-	"query": "plumProAPI.query.getBalance",
-	"tag": "plumProAPI",
-	"variables": {
-		"data":{
-			
-		}
-	}
-}'
+            $this->makeJsonBody()
         );
+    }
+
+    private function makeJsonBody(): string
+    {
+        $data = [
+            'query' => 'plumProAPI.query.getBalance',
+            'tag' => 'plumProAPI',
+            'variables' => [
+                'data' => []
+            ],
+        ];
+        return json_encode($data, true);
     }
 }

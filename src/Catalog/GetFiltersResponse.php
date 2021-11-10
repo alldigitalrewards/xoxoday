@@ -6,25 +6,22 @@
 
 namespace AllDigitalRewards\Xoxoday\Catalog;
 
-use AllDigitalRewards\Xoxoday\AbstractEntity;
-use Psr\Http\Message\ResponseInterface;
+use AllDigitalRewards\Xoxoday\AbstractResponse;
+use Exception;
+use stdClass;
 
-class GetFiltersResponse extends AbstractEntity
+class GetFiltersResponse extends AbstractResponse
 {
     protected array $filters;
 
-    public function __construct(ResponseInterface $response)
+    /**
+     * @throws Exception
+     */
+    public function extractData(stdClass $data): AbstractResponse
     {
-        return $this->extractData($response);
-    }
-
-    private function extractData(ResponseInterface $response)
-    {
-        $data = json_decode($response->getBody());
-
         if (empty($data->data->getFilters->data)) {
             // ╭∩╮(Ο_Ο)╭∩╮
-            throw new \Exception('Response data hates you.');
+            throw new Exception('No Filters found');
         }
 
         $this->setFilters($data->data->getFilters->data);

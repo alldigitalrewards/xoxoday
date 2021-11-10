@@ -39,32 +39,38 @@ class GetVouchersRequest extends Request implements HasResponse
                 'Content-Type' => 'application/json',
                 'Authorization' => 'Bearer ' . $this->accessToken,
             ],
-            '{
-	"query": "plumProAPI.mutation.getVouchers",
-	"tag": "plumProAPI",
-	"variables": {
-		"data":{
-			"limit": 10,
-        	"page": 1,
-        	"includeProducts": "",
-        	"excludeProducts": "",
-        	"sort": {
-        		"field":"",
-        		"order":""
-        	},
-        	"filters":[
-        		{
-        			"key": "currencyCode",
-        			"value": "USD"
-        		},
-                {
-                    "key":"productName",
-                    "value": ""
-                }
-    		]
-		}
-	}
-}'
+            $this->makeJsonBody()
         );
+    }
+
+    private function makeJsonBody(): string
+    {
+        $data = [
+            'query' => 'plumProAPI.mutation.getVouchers',
+            'tag' => 'plumProAPI',
+            'variables' => [
+                'data' => [
+                    'limit' => $this->getLimit(),
+                    'page' => $this->getPage(),
+                    'includeProducts' => "",
+                    'excludeProducts' => "",
+                    'sort' => [
+                        'field' => '',
+                        'order' => '',
+                    ],
+                    'filters' => [
+                        [
+                            'key' => 'currencyCode',
+                            'value' => 'USD'
+                        ],
+                        [
+                            'key' => 'productName',
+                            'value' => ''
+                        ],
+                    ]
+                ]
+            ],
+        ];
+        return json_encode($data, true);
     }
 }
