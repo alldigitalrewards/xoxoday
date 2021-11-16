@@ -18,13 +18,54 @@ class GetVouchersRequest extends Request implements HasResponse
     use HasPages, HasEnvironments;
 
     private string $accessToken = '';
+    private string $includeProducts = '';
+    private string $excludeProducts = '';
 
-    public function __construct(string $access_token, int $limit = 10, int $page = 1)
-    {
+    public function __construct(
+        string $access_token,
+        int $limit = 10,
+        int $page = 1,
+        string $includeProducts = '',
+        string $excludeProducts = '',
+    ) {
         $this->accessToken = $access_token;
         $this->setLimit($limit);
         $this->setPage($page);
+        $this->setIncludeProducts($includeProducts);
+        $this->setExcludeProducts($excludeProducts);
         $this->setupRequest();
+    }
+
+    /**
+     * @return string
+     */
+    public function getIncludeProducts(): string
+    {
+        return $this->includeProducts;
+    }
+
+    /**
+     * @param string $includeProducts
+     */
+    public function setIncludeProducts(string $includeProducts): void
+    {
+        $this->includeProducts = $includeProducts;
+    }
+
+    /**
+     * @return string
+     */
+    public function getExcludeProducts(): string
+    {
+        return $this->excludeProducts;
+    }
+
+    /**
+     * @param string $excludeProducts
+     */
+    public function setExcludeProducts(string $excludeProducts): void
+    {
+        $this->excludeProducts = $excludeProducts;
     }
 
     public function getResponseObject(): string
@@ -54,8 +95,8 @@ class GetVouchersRequest extends Request implements HasResponse
                 'data' => [
                     'limit' => $this->getLimit(),
                     'page' => $this->getPage(),
-                    'includeProducts' => "",
-                    'excludeProducts' => "",
+                    'includeProducts' => $this->getIncludeProducts(),
+                    'excludeProducts' => $this->getExcludeProducts(),
                     'sort' => [
                         'field' => '',
                         'order' => '',
