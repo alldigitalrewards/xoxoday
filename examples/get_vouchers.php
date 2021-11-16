@@ -6,7 +6,13 @@ use AllDigitalRewards\Xoxoday\Catalog\GetVouchersRequest;
 use AllDigitalRewards\Xoxoday\Client;
 use Psr\Http\Client\ClientExceptionInterface;
 
-$getVouchersRequest = new GetVouchersRequest('some-access-token');
+
+$getVouchersRequest = new GetVouchersRequest(
+    'some-access-token',
+    10,
+    1,
+    '27222'
+);
 
 $xoxodayClient = new Client();
 try {
