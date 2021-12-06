@@ -7,10 +7,10 @@ use Psr\Http\Message\ResponseInterface;
 
 class AccessTokenResponse extends AbstractEntity
 {
-    protected string $access_token;
-    protected string $token_type;
-    protected string $expires_in;
-    protected string $refresh_token;
+    protected string $access_token = '';
+    protected string $token_type = '';
+    protected string $expires_in = '';
+    protected string $refresh_token = '';
 
     public function __construct(ResponseInterface $response)
     {
