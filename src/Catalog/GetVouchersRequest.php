@@ -101,16 +101,7 @@ class GetVouchersRequest extends Request implements HasResponse
                         'field' => '',
                         'order' => '',
                     ],
-                    'filters' => [
-                        [
-                            'key' => 'currencyCode',
-                            'value' => 'USD'
-                        ],
-                        [
-                            'key' => 'productName',
-                            'value' => ''
-                        ],
-                    ]
+                    'filters' => []
                 ]
             ],
         ];
