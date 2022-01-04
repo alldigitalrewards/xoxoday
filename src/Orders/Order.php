@@ -41,8 +41,7 @@ class Order extends AbstractEntity
     {
         $container = [];
         foreach ($this->vouchers as $voucher) {
-            $data = new Voucher((array)$voucher);
-            $container[] =  $data->toArray();
+            $container[] =  new Voucher((array)$voucher);
         }
         return $container;
     }
