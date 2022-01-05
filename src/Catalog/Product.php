@@ -30,7 +30,7 @@ class Product extends AbstractEntity
     protected string $deliveryType;
     protected float $fee;
     protected float $discount;
-    protected int $exchangeRate;
+    protected float $exchangeRate;
 
     /**
      * @return int
@@ -401,17 +401,17 @@ class Product extends AbstractEntity
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getExchangeRate(): int
+    public function getExchangeRate(): float
     {
         return $this->exchangeRate;
     }
 
     /**
-     * @param int $exchangeRate
+     * @param float $exchangeRate
      */
-    public function setExchangeRate(int $exchangeRate): void
+    public function setExchangeRate(float $exchangeRate): void
     {
         $this->exchangeRate = $exchangeRate;
     }
