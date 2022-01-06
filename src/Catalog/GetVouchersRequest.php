@@ -95,6 +95,7 @@ class GetVouchersRequest extends Request implements HasResponse
                 'data' => [
                     'limit' => $this->getLimit(),
                     'page' => $this->getPage(),
+                    'exchangeRate' => 1,
                     'includeProducts' => $this->getIncludeProducts(),
                     'excludeProducts' => $this->getExcludeProducts(),
                     'sort' => [
