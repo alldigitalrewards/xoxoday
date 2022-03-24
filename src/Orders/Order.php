@@ -8,10 +8,10 @@ class Order extends AbstractEntity
 {
     protected int $orderId;
     protected array $vouchers;
-    protected string|int $amountCharged;
+    protected float $amountCharged;
     protected string $currencyCode;
     protected string $tag;
-    protected string|float $currencyValue;
+    protected float $currencyValue;
     protected string|float $discountPercent;
     protected string|float $orderDiscount;
     protected string|float $orderTotal;
@@ -55,17 +55,17 @@ class Order extends AbstractEntity
     }
 
     /**
-     * @return int|string
+     * @return float
      */
-    public function getAmountCharged(): int|string
+    public function getAmountCharged(): float
     {
         return $this->amountCharged;
     }
 
     /**
-     * @param int|string $amountCharged
+     * @param float $amountCharged
      */
-    public function setAmountCharged(int|string $amountCharged): void
+    public function setAmountCharged(float $amountCharged): void
     {
         $this->amountCharged = $amountCharged;
     }
@@ -103,17 +103,17 @@ class Order extends AbstractEntity
     }
 
     /**
-     * @return float|string
+     * @return float
      */
-    public function getCurrencyValue(): float|string
+    public function getCurrencyValue(): float
     {
         return $this->currencyValue;
     }
 
     /**
-     * @param float|string $currencyValue
+     * @param float $currencyValue
      */
-    public function setCurrencyValue(float|string $currencyValue): void
+    public function setCurrencyValue(float $currencyValue): void
     {
         $this->currencyValue = $currencyValue;
     }

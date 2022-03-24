@@ -23,7 +23,7 @@ class Product extends AbstractEntity
     protected float $exchangeRateRule;
     protected string $valueType;
     protected int $maxValue;
-    protected int $minValue;
+    protected float $minValue;
     protected string $valueDenominations;
     protected int $tatInDays;
     protected string $usageType;
@@ -289,9 +289,9 @@ class Product extends AbstractEntity
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getMinValue(): int
+    public function getMinValue(): float
     {
         return $this->minValue;
     }
@@ -299,7 +299,7 @@ class Product extends AbstractEntity
     /**
      * @param int $minValue
      */
-    public function setMinValue(int $minValue): void
+    public function setMinValue(float $minValue): void
     {
         $this->minValue = $minValue;
     }

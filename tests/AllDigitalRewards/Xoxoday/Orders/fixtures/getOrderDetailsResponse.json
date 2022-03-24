@@ -1,0 +1,33 @@
+{
+  "data": {
+    "getOrderDetails": {
+      "status": 1,
+      "data": {
+        "orderId": 555555,
+        "orderTotal": 11.53,
+        "orderDiscount": "0.35",
+        "discountPercent": "3",
+        "currencyCode": "USD",
+        "currencyValue": 0.013109,
+        "amountCharged": 11.18,
+        "orderStatus": "complete",
+        "deliveryStatus": "delivered",
+        "tag": "",
+        "vouchers": [
+          {
+            "productId": 555,
+            "orderId": 555555,
+            "voucherCode": "https://example.com/frontend/ecard.do?id=fake&sub=yz40iyo65z",
+            "pin": "727676",
+            "validity": "2025-02-07",
+            "amount": 10,
+            "currency": "EUR",
+            "country": "DE",
+            "type": "url",
+            "currencyValue": 0.01137
+          }
+        ]
+      }
+    }
+  }
+}
