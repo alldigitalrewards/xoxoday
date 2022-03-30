@@ -124,12 +124,12 @@ class AccessTokenResponse extends AbstractEntity
             return false;
         }
 
-        return !$this->isExpired();
+        return true;
     }
 
     public function isExpired(): bool
     {
-        $expiresOn = $this->created_on->add(new \DateInterval('PT' . $this->expires_in . 'S'));
+        $expiresOn = (clone $this->created_on)->add(new \DateInterval('PT' . $this->expires_in . 'S'));
         if ($expiresOn <= new DateTime()) {
             return true;
         }
