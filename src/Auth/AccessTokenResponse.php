@@ -87,7 +87,7 @@ class AccessTokenResponse extends AbstractEntity
     }
 
     /**
-     * @param sting $refresh_token
+     * @param string $refresh_token
      */
     public function setRefreshToken($refresh_token): void
     {
