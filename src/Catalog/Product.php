@@ -25,7 +25,13 @@ class Product extends AbstractEntity
     protected int $maxValue;
     protected float $minValue;
     protected string $valueDenominations;
-    protected int $tatInDays;
+    /**
+     * Turn around time in days.
+     *
+     * This is often an integer but may be a string. example: "0 - 7"
+     * @var string
+     */
+    protected string $tatInDays = "";
     protected string $usageType;
     protected string $deliveryType;
     protected float $fee;
@@ -321,17 +327,17 @@ class Product extends AbstractEntity
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getTatInDays(): int
+    public function getTatInDays(): string
     {
         return $this->tatInDays;
     }
 
     /**
-     * @param int $tatInDays
+     * @param string $tatInDays
      */
-    public function setTatInDays(int $tatInDays): void
+    public function setTatInDays(string $tatInDays): void
     {
         $this->tatInDays = $tatInDays;
     }
