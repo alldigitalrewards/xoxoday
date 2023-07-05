@@ -23,7 +23,7 @@
   "maxValue": 10,
   "minValue": 500,
   "valueDenominations": "10,20",
-  "tatInDays": 0,
+  "tatInDays": "1 - 7",
   "usageType": "",
   "deliveryType": "realtime",
   "isCommon": "0",
